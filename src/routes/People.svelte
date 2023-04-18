@@ -57,33 +57,33 @@
 				/>
 				<div class="flex flex-row rounded border-[1px] border-gray-500">
 					<div class="border-gray-500 border-r-[1px] px-3 flex items-center">
-					<span class="">
-						{#if $settings.currency === 'EUR'}
-							€
-						{:else}
-							$
-						{/if}
-					</span>
+						<span class="">
+							{#if $settings.currency === 'EUR'}
+								€
+							{:else}
+								$
+							{/if}
+						</span>
+					</div>
+					<input
+						type="number"
+						class="flex-grow-0 border-none rounded-none w-24"
+						bind:value={person.rate}
+						on:input={() => updatePerson(index, person)}
+						on:keydown={(event) => handleKeyDown(event, index)}
+					/>
 				</div>
-				<input
-					type="number"
-					class="flex-grow-0 border-none rounded-none w-24"
-					bind:value={person.rate}
-					on:input={() => updatePerson(index, person)}
-					on:keydown={(event) => handleKeyDown(event, index)}
-				/>
-			</div>
-				
-					<select
-						bind:value={person.rateType}
-						on:change={() => updatePerson(index, person)}
-						placeholder="Salary or hourly rate"
-					>
-						<option value="hourly">hourly</option>
-						<option value="monthly">monthly</option>
-						<option value="yearly">yearly</option>
-					</select>
-				
+
+				<select
+					bind:value={person.rateType}
+					on:change={() => updatePerson(index, person)}
+					placeholder="Salary or hourly rate"
+				>
+					<option value="hourly">hourly</option>
+					<option value="monthly">monthly</option>
+					<option value="yearly">yearly</option>
+				</select>
+
 				{#if peopleList.length > 1}
 					<button
 						class="px-2 flex-grow-0 text-sm hover:text-opacity-70 flex justify-center items-center"
