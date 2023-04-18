@@ -10,8 +10,8 @@ export interface Person {
 
 const initialPeople: Person[] = [{
     name: '',
-    rate: 100,
-    rateType: 'hourly',
+    rate: 40000,
+    rateType: 'yearly',
     costPerHour: 0
 }];
 

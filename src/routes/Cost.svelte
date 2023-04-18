@@ -18,6 +18,10 @@
 		}, 0);
 	}
 
+	// TODO: Add monthly calculation
+	// TODO: set monthly as default value
+	// TODO: Add employer markup
+	// TODO: Add estimated full time and holidays etc to settings
 	function calculateCostPerHour(person: Person): number {
 		if (person.rateType === 'hourly') {
 			return person.rate;

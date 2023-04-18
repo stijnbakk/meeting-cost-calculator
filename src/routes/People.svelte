@@ -37,8 +37,9 @@
 	});
 </script>
 
-<h2 class="font-serif font-bold text-xl mb-4">People in the meeting</h2>
-<div class="flex flex-col gap-2">
+<h2 class="font-serif font-bold text-xl mb-4 text-center mb:text-left">People in the meeting</h2>
+<div class="flex justify-center">
+<div class="flex flex-col gap-2 max-w-5xl">
 	{#each peopleList as person, index}
 		<div class="bg-gray-100 p-2 rounded flex flex-col md:flex-row gap-2">
 			<input
@@ -70,6 +71,7 @@
 		</div>
 	{/each}
   <button class="border border-gray-100 rounded text-gray-600 text-sm py-1 px-2 hover:bg-gray-50" on:click={addPerson}>Add</button>
+</div>
 </div>
 
 
