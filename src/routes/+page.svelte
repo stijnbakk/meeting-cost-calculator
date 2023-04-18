@@ -6,8 +6,6 @@
 	import Settings from './Settings.svelte';
 	import TimeDisplay from './TimeDisplay.svelte';
 	import Timer from './Timer.svelte';
-	
-	import ExportableImage from './ExportableImage.svelte';
 
 	let meetingTitle = '';
 	let organisationName = '';
