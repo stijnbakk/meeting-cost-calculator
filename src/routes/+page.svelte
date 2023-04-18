@@ -7,6 +7,9 @@
 	import TimeDisplay from './TimeDisplay.svelte';
 	import Timer from './Timer.svelte';
 
+	import SvelteSeo from "svelte-seo";
+
+
 	let meetingTitle = '';
 	let organisationName = '';
 	let meetingDate: Date = new Date();
@@ -14,7 +17,14 @@
 	onMount(() => {
 		meetingDate = new Date();
 	});
+
+
 </script>
+
+<SvelteSeo
+  title="Meeting cost calculator"
+  description="Simple tool to quickly estimate the cost of any meeting"
+/>
 
 <div class="p-10">
     <Settings />
