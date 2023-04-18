@@ -1,5 +1,7 @@
 <!-- src/components/Time.svelte -->
 <script lang="ts">
+    	  import { _ } from 'svelte-i18n'
+
 	import { time } from '$lib/stores/time';
 </script>
 
@@ -11,9 +13,9 @@
             <td class="largeNumber"><input bind:value={$time.seconds} class='w-10 text-center'/></td>
         </tr>
         <tr>
-            <td class="smallNumber">Hours</td>
-            <td class="smallNumber">Minutes</td>
-            <td class="smallNumber">Seconds</td>
+            <td class="smallNumber">{$_('time_hours_title')}</td>
+            <td class="smallNumber">{$_('time_minutes_title')}</td>
+            <td class="smallNumber">{$_('time_seconds_title')}</td>
         </tr>
     </table>
 </div>

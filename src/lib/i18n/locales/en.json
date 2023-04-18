@@ -1,0 +1,21 @@
+{
+    "app_title": "Meeting cost calculator",
+    "app_description": "Simple tool to quickly estimate the cost of any meeting",
+
+    "time_hours_title": "Hours",
+    "time_minutes_title": "Minutes",
+    "time_seconds_title": "Seconds",
+
+    "settings_currency_title": "Currency",
+    "settings_employerMarkup_title": "Employer markup",
+    "settings_workingHoursPerWeek_title": "Working hours per week",
+    "settings_holidaysPerYear_title": "Holidays per year",
+    "settings_vacationDaysPerYear_title": "Vacation days per year",
+
+    "people_title": "People in the meeting",
+    "people_name_placeholder": "Name",
+    "people_salary_select_option_hourly": "Gross hourly rate",
+    "people_salary_select_option_monthly": "Gross monthly salary",
+    "people_salary_select_option_yearly": "Gross yearly salary",
+    "people_button_add_people": "Add person"
+  }

@@ -3,6 +3,8 @@
 	import { people, type Person } from '$lib/stores/people';
 	import { settings } from '$lib/stores/settings';
 	import { onMount, tick } from 'svelte';
+	import { _ } from 'svelte-i18n'
+
 
 	function addPerson() {
 		people.update((currentPeople) => [
@@ -41,14 +43,14 @@
 	});
 </script>
 
-<h2 class="font-serif font-bold text-xl mb-4 text-center mb:text-left">People in the meeting</h2>
+<h2 class="font-serif font-bold text-xl mb-4 text-center mb:text-left">{$_('people_title')}</h2>
 <div class="flex justify-center">
 	<div class="flex flex-col gap-2 w-full max-w-5xl">
 		{#each peopleList as person, index}
 			<div class="border-[1px] border-gray-100 p-2 rounded flex flex-col md:flex-row gap-2">
 				<input
 					id={`name-input-${index}`}
-					placeholder="Name"
+					placeholder={$_('people_name_placeholder')}
 					type="text"
 					class="flex-grow"
 					bind:value={person.name}
@@ -79,9 +81,9 @@
 					on:change={() => updatePerson(index, person)}
 					placeholder="Salary or hourly rate"
 				>
-					<option value="hourly">hourly</option>
-					<option value="monthly">monthly</option>
-					<option value="yearly">yearly</option>
+					<option value="hourly">{$_('people_salary_select_option_hourly')}</option>
+					<option value="monthly">{$_('people_salary_select_option_monthly')}</option>
+					<option value="yearly">{$_('people_salary_select_option_yearly')}</option>
 				</select>
 
 				{#if peopleList.length > 1}
@@ -94,7 +96,7 @@
 		{/each}
 		<button
 			class="border border-gray-100 rounded text-gray-600 text-sm py-1 px-2 hover:bg-gray-50"
-			on:click={addPerson}>Add</button
+			on:click={addPerson}>{$_('people_button_add_people')}</button
 		>
 	</div>
 </div>

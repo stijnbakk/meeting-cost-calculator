@@ -1,0 +1,21 @@
+{
+    "app_title": "Vergaderkosten rekenmachine",
+    "app_description": "Simpele rekenmachine om snel de kosten van een vergadering in te schatten",
+
+    "time_hours_title": "Uren",
+    "time_minutes_title": "Minuten",
+    "time_seconds_title": "Seconden",
+
+    "settings_currency_title": "Valuta",
+    "settings_employerMarkup_title": "Werkgever markup",
+    "settings_workingHoursPerWeek_title": "Werkuren per week",
+    "settings_holidaysPerYear_title": "Feestdagen per jaar",
+    "settings_vacationDaysPerYear_title": "Vakantiedagen per jaar",
+
+    "people_title": "Mensen in de vergadering",
+    "people_name_placeholder": "Naam",
+    "people_salary_select_option_hourly": "Bruto uurtarief",
+    "people_salary_select_option_monthly": "Bruto maandsalaris",
+    "people_salary_select_option_yearly": "Bruto jaarsalaris",
+    "people_button_add_people": "Voeg persoon toe"
+  }

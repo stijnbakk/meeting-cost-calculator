@@ -1,4 +1,6 @@
 <script lang="ts">
+	  import { _ } from 'svelte-i18n'
+
 	import { time } from '$lib/stores/time';
 	import { onMount } from 'svelte';
 	import Cost from './Cost.svelte';
@@ -22,15 +24,13 @@
 </script>
 
 <SvelteSeo
-  title="Meeting cost calculator"
-  description="Simple tool to quickly estimate the cost of any meeting"
+  title={$_('app_title')}
+  description={$_('app_description')}
 />
 
 <div class="p-10">
-    <Settings />
-	<div class="flex w-full items-center justify-center">
-		<span class="text-sm opacity-50 block font-bold font-serif">meeting cost calculator</span>
-	</div>
+    
+	
 
     <div class="min-h-[80vh] flex flex-col items-center justify-center w-full">
 	<div class="flex justify-center">
