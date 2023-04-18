@@ -11,7 +11,7 @@
 	<div class="flex-grow items-center flex md:pl-5">
 		<span class="text-sm opacity-50 block font-bold font-serif">{$_('app_title')}</span>
 	</div>
-	<p>{$locale}</p>
+	
 	<select class="border-[1px] rounded border-black" bind:value={$locale}>
 		<option value="nl">🇳🇱</option>
 		<option value="en">🇬🇧</option>
