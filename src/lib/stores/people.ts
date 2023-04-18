@@ -4,14 +4,15 @@ import { writable } from 'svelte/store';
 export interface Person {
   name: string;
   rate: number;
-  rateType: 'hourly' | 'yearly';
+  // TODO: add monthly
+  rateType: 'hourly' | 'monthly' | 'yearly';
   costPerHour: number;
 }
 
 const initialPeople: Person[] = [{
     name: '',
-    rate: 40000,
-    rateType: 'yearly',
+    rate: 5000,
+    rateType: 'monthly',
     costPerHour: 0
 }];
 

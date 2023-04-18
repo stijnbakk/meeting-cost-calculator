@@ -20,13 +20,20 @@
 
 	// TODO: Add monthly calculation
 	// TODO: set monthly as default value
-	// TODO: Add employer markup
 	// TODO: Add estimated full time and holidays etc to settings
 	function calculateCostPerHour(person: Person): number {
 		if (person.rateType === 'hourly') {
 			return person.rate;
-		} else if (person.rateType === 'yearly') {
-			return person.rate / (40 * 52); // Assuming 40 hours/week and 52 weeks/year
+		} else if (person.rateType === 'monthly') {
+			const employerSalaryCost = person.rate * 12 * (1 + $settings.employerCostMarkup / 100);
+			const hoursPerYear = $settings.weeksPerYear * $settings.hoursPerWeek - ($settings.holidaysPerYear + $settings.vacationDaysPerYear) * 8;
+			return employerSalaryCost / hoursPerYear
+		} 
+		else if (person.rateType === 'yearly') {
+			const employerSalaryCost = person.rate * (1 + $settings.employerCostMarkup / 100);
+			const hoursPerYear = $settings.weeksPerYear * $settings.hoursPerWeek - ($settings.holidaysPerYear + $settings.vacationDaysPerYear) * 8;
+
+			return employerSalaryCost / hoursPerYear
 		}
 		return 0;
 	}
