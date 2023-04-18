@@ -43,7 +43,7 @@
 
 <h2 class="font-serif font-bold text-xl mb-4 text-center mb:text-left">People in the meeting</h2>
 <div class="flex justify-center">
-	<div class="flex flex-col gap-2 max-w-5xl">
+	<div class="flex flex-col gap-2 w-full max-w-5xl">
 		{#each peopleList as person, index}
 			<div class="border-[1px] border-gray-100 p-2 rounded flex flex-col md:flex-row gap-2">
 				<input
