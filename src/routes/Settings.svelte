@@ -14,7 +14,7 @@
 	
 	{#if showSettings}
 		<div
-			class="absolute w-96 max-w-screen-sm top-12 right-0 grid grid-cols-1 md:grid-cols-2 mt-1 z-50 bg-white gap-2 border-black border-[1px] rounded p-4"
+			class="absolute w-96 top-12 right-0 grid grid-cols-1 md:grid-cols-2 mt-1 z-50 bg-white gap-2 border-black border-[1px] rounded p-4" style="max-width: calc(100vw - 1rem);"
 		>
 			<div class="flex items-center"><p>{$_('settings_currency_title')}</p></div>
 			<select class="rounded" bind:value={$settings.currency}>
